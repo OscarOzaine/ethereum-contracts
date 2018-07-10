@@ -182,7 +182,8 @@
             
             var ethTransaction = {
                 nonce: web3.toHex(nonce),
-                //chainId: 8888,
+
+                chainId: 4,
                 //gasPrice: '0x64',//100,//gasPriceHex,
                 //gasLimit: '0x3E8',//1000,//web3.toHex('2710'),//web3.toHex(web3.toWei('2710000000', 'wei')),
                 //gasPrice: web3.toWei(150, 'gwei'),
@@ -190,14 +191,15 @@
                 to: contract_address,
                 //value: 0.015,
 
-                value: web3.toHex(web3.toWei("0.015", "ether")),
+                value: '0x' + web3.toHex(web3.toWei("0.015", "ether")),
+                //gasLimit: web3.toHex(3141592000000),
                 //gasPrice: web3.toHex(2100000), 
                 //gas: web3.toHex(2100000000),
                 data: data,
-                gasPrice: web3.toHex(200), 
+                //gasPrice: web3.toHex(20), 
                 //gasPrice:web3.toWei(60, 'gwei'),
-                gasLimit: web3.toHex(100000000000000),
-                gas: 100000,
+                //gasLimit: web3.toHex(100000000000000),
+                gas: '0x' + web3.toHex(2100000),
                 //value: web3.toWei(0.002, "ether"), gas:21000, gasPrice:web3.toWei(60, 'gwei')}
             };
 
